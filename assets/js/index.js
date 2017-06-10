@@ -1,5 +1,5 @@
 // code for about page
-const adjectives = ["Full Stack Developer", "Front End Engineer", "Back End Developer", "Mission Driven", "Curious", "Cat Lover"]
+const adjectives = ["Full Stack Developer", "Front End Engineer", "Back End Developer", "Mission driven", "Curious", "Cat lover"]
 let $target = '';
 let loadContentIndex = 0;
 
