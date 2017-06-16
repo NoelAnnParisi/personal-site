@@ -1,6 +1,6 @@
 module.exports = {
 
-  entry: "./assets/js",
+  entry: "./app/app.js",
 
   // The plain compiled JavaScript will be output into this file
   output: {
