@@ -3,7 +3,7 @@ import React from 'react';
 export default class About extends React.Component {
 	render (){
 		return(
-			 <div className="vh-100 dt w-100">
+			 <div className="dt w-100">
           <div className="dtc pt0 v-mid ph3 ph4-m ph5-l">
             <h1 className="header tc f3 f-subheadline-l measure lh-title fw3">
               Noel Parisi
