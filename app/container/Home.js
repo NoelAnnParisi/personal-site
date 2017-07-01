@@ -4,12 +4,6 @@ import styled from 'styled-components'
 import P from 'react-particles-js'
 import Banner from '../components/Banner'
 import Icons from '../components/Icons'
-const NavBar = styled.section`
-  display:flex;
-  height:100%;
-  justify-content:center;
-  align-items:center;
-`
 
 const Home = () => {
   return (
@@ -18,7 +12,7 @@ const Home = () => {
         params={{
           particles: {
             number: {
-              value: 71,
+              value: 60,
               density: {
                 enable: true,
                 value_area: 946.9771699587272
@@ -30,7 +24,7 @@ const Home = () => {
             shape: {
               type: 'triangle',
               stroke: {
-                width: 1,
+                width: 1.5,
                 color: '#18ffff'
               },
               polygon: {
@@ -38,7 +32,7 @@ const Home = () => {
               }
             },
             opacity: {
-              value: 0.12827296486924183,
+              value: 1,
               random: false,
               anim: {
                 enable: true,
@@ -48,32 +42,32 @@ const Home = () => {
               }
             },
             size: {
-              value: 3,
+              value: 4,
               random: true,
               anim: {
-                enable: false,
-                speed: 40,
+                enable: true,
+                speed: 12,
                 size_min: 0.1,
                 sync: false
               }
             },
             line_linked: {
               enable: true,
-              distance: 192.40944730386272,
+              distance: 200,
               color: '#ff80ab',
-              opacity: 0.4,
-              width: 1
+              opacity: 0.8,
+              width: 1.1
             },
             move: {
               enable: true,
-              speed: 1.603412060865523,
+              speed: 0.5,
               direction: 'top',
               random: false,
               straight: false,
               out_mode: 'out',
               bounce: false,
               attract: {
-                enable: false,
+                enable: true,
                 rotateX: 721.5354273894853,
                 rotateY: 1200
               }
@@ -87,7 +81,7 @@ const Home = () => {
                 mode: 'grab'
               },
               onclick: {
-                enable: false,
+                enable: true,
                 mode: 'push'
               },
               resize: true
@@ -136,5 +130,3 @@ const Home = () => {
 
 export default Home
 
-//width: '100%',
-//height: '100%'

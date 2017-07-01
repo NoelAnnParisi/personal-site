@@ -3,16 +3,15 @@ import styled from 'styled-components'
 
 const StyledDiv = styled.div`
   text-align:center;
-  font-weight:300;
-  font-style:bold;
-  font-size:4em;
-  color: cyan;
+  font-size:3em;
+  font-weight:200;
+  color: palevioletred;
 `
 
 const Banner = () => {
   return (
     <div
-      className="code mt6 mt7-ns"
+      className="avenir tracked-mega head mt6 mt7-ns"
       style={{display: 'flex', justifyContent: 'center'}}
     >
       <StyledDiv>
