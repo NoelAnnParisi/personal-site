@@ -3,12 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 const config = {
-  entry: './app/app.js',
+  entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
     publicPath: '/',
   },
+  devtool: process.env.NODE_ENV === 'development' ? 'eval' : 'nosources-source-map',
   module: {
     rules: [
       {
