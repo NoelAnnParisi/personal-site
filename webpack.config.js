@@ -1,33 +1,42 @@
-module.exports = {
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
-  entry: "./app/app.js",
-
-  // The plain compiled JavaScript will be output into this file
+const config = {
+  entry: './app/app.js',
   output: {
-    filename: "public/bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index_bundle.js',
+    publicPath: '/',
   },
-
-  // This section desribes the transformations we will perform
   module: {
-    loaders: [{
-      // Only working with files that in in a .js or .jsx extension
-      test: /\.jsx?$/,
-      // Webpack will only process files in our app folder. This avoids processing
-      // node modules and server files unnecessarily
-      include: /app/,
-      use: {
-        loader: 'babel-loader',
-          options: {
-              presets: ["react", "es2015"]
-          }
-      }
-
-    }, {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-    }]
+    rules: [
+      {
+        test: /\.(js)$/,
+        use: 'babel-loader',
+      },
+      {test: /\.css$/, use: ['style-loader', 'css-loader']},
+    ],
   },
-  // This lets us debug our react code in chrome dev tools. Errors will have lines and file names
-  // Without this the console says all errors are coming from just coming from bundle.js
-  devtool: "eval-source-map"
-};
+  devServer: {
+    historyApiFallback: true,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'app/index.html',
+    }),
+  ],
+}
+
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
+    new webpack.optimize.UglifyJsPlugin()
+  )
+}
+
+module.exports = config
