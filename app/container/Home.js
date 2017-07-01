@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 
 import P from 'react-particles-js'
-import Nav from '../components/Nav'
-
+import Banner from '../components/Banner'
+import Icons from '../components/Icons'
 const NavBar = styled.section`
   display:flex;
   height:100%;
@@ -25,13 +25,13 @@ const Home = () => {
               }
             },
             color: {
-              value: '#db7093'
+              value: '#ff80ab'
             },
             shape: {
               type: 'triangle',
               stroke: {
                 width: 1,
-                color: '#db7093'
+                color: '#18ffff'
               },
               polygon: {
                 nb_sides: 3
@@ -60,7 +60,7 @@ const Home = () => {
             line_linked: {
               enable: true,
               distance: 192.40944730386272,
-              color: '#db7093',
+              color: '#ff80ab',
               opacity: 0.4,
               width: 1
             },
@@ -128,7 +128,8 @@ const Home = () => {
           height: '100%'
         }}
       />
-      <Nav />
+      <Banner />
+      <Icons />
     </div>
   )
 }
