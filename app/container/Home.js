@@ -12,9 +12,9 @@ const Home = () => {
         params={{
           particles: {
             number: {
-              value: 60,
+              value: 50,
               density: {
-                enable: true,
+                enable: false,
                 value_area: 946.9771699587272
               }
             },
@@ -32,7 +32,7 @@ const Home = () => {
               }
             },
             opacity: {
-              value: 1,
+              value: 0.8,
               random: false,
               anim: {
                 enable: true,
@@ -53,10 +53,10 @@ const Home = () => {
             },
             line_linked: {
               enable: true,
-              distance: 200,
+              distance: 160,
               color: '#ff80ab',
               opacity: 0.8,
-              width: 1.1
+              width: 1.5
             },
             move: {
               enable: true,
@@ -67,7 +67,7 @@ const Home = () => {
               out_mode: 'out',
               bounce: false,
               attract: {
-                enable: true,
+                enable: false,
                 rotateX: 721.5354273894853,
                 rotateY: 1200
               }
@@ -101,7 +101,7 @@ const Home = () => {
                 speed: 3
               },
               repulse: {
-                distance: 200,
+                distance: 400,
                 duration: 0.4
               },
               push: {
