@@ -1,23 +1,53 @@
 import React, {Component} from 'react'
 
-const About = () => {
-  return (
-    <article className="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-      <div className="tc">
-        <img
-          src="http://tachyons.io/img/avatar_1.jpg"
-          className="br-100 h3 w3 dib"
-          title="Photo of a kitty staring at you"
-        />
-        <h1 className="f4">Mimi Whitehouse</h1>
-        <hr className="mw3 bb bw1 b--black-10" />
-      </div>
-      <p className="lh-copy measure center f6 black-70">
-        Quite affectionate and outgoing. She loves to get chin scratches and
-        will roll around on the floor waiting for you give her more of them.
-      </p>
-    </article>
-  )
+export default class About extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      exitHover: false,
+    }
+    this.toggleExitHover = this.toggleExitHover.bind(this)
+  }
+  toggleExitHover() {
+    this.setState({
+      exitHover: !this.state.exitHover,
+    })
+  }
+  render() {
+    return (
+      <section className="avenir tc mt6 ">
+        <article className="relative mw7 center">
+          <div>
+            <p style={{color: 'palevioletred'}} className="f4 mv1">
+              I'm a mission-driven full stack developer who lives on coffee &
+              strives to create reliable, user-focused products. My tools of
+              choice include, but aren't limited to: Javascript/ES6, HTML5/CSS3,
+              React.js, Node.js, Express.js, Webpack and MySQL/NoSQL. I've
+              contrbuited to a variety of projects ranging from a React Native
+              mobile app to a website for a local start up. I've also flexed my
+              backend muscles on a project called GitLists. All of which can be
+              found by clicking the handy GitHub icon below. I constantly seek
+              to expand my knowledge & grow as a developer and person. Others
+              say my uplifting nature and ability to build rapport are my
+              greatest qualities. For me, there's nothing sweeter than working
+              together to reach a common goal...besides the occassional spoonful
+              of sunflower seed butter.{' '}
+              <a
+                onMouseEnter={this.toggleExitHover}
+                onMouseLeave={this.toggleExitHover}
+                style={{
+                  color: 'cyan',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={this.props.close}
+              >
+                Thanks for reading!
+              </a>
+            </p>
+          </div>
+        </article>
+      </section>
+    )
+  }
 }
-
-export default About

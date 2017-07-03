@@ -45,7 +45,7 @@ export default class Icons extends Component {
       ? ((linkedInColor = 'cyan'), (linkedinStyle = {transform: 'scale(1.3)'}))
       : linkedInColor && linkedinStyle
     return (
-      <div style={{zIndex: 5}} className="mt2 pv4 ph3 ph5-ns tc">
+      <div style={{zIndex: 5}} className="mt2 pv4 ph3 ph6-ns tc">
         <a
           style={gitHubStyle}
           onMouseEnter={this.toggleHoverGithub}
