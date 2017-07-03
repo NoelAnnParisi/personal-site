@@ -6,7 +6,7 @@ export default class Icons extends Component {
     this.state = {
       hoverGithub: false,
       hoverLinkedIn: false,
-      hoverTwitter: false
+      hoverTwitter: false,
     }
     this.toggleHoverGithub = this.toggleHoverGithub.bind(this)
     this.toggleHoverLinkedIn = this.toggleHoverLinkedIn.bind(this)
@@ -14,18 +14,18 @@ export default class Icons extends Component {
   }
   toggleHoverGithub() {
     this.setState({
-      hoverGithub: !this.state.hoverGithub
+      hoverGithub: !this.state.hoverGithub,
     })
   }
 
   toggleHoverLinkedIn() {
     this.setState({
-      hoverLinkedIn: !this.state.hoverLinkedIn
+      hoverLinkedIn: !this.state.hoverLinkedIn,
     })
   }
   toggleHoverTwitter() {
     this.setState({
-      hoverTwitter: !this.state.hoverTwitter
+      hoverTwitter: !this.state.hoverTwitter,
     })
   }
   render() {
