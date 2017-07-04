@@ -6,9 +6,7 @@ import About from './About'
 
 const StyledDiv = styled.div`
   text-align: center;
-  font-size: 3em;
-  font-weight: 200;
-  color: palevioletred;
+  font-size: 2.8em;
   z-index: 5;
 `
 export default class Banner extends Component {
@@ -36,6 +34,7 @@ export default class Banner extends Component {
   render() {
     let bannerStyle = {
       color: 'palevioletred',
+      fontWeight: 200,
       textDecoration: 'none',
       border: 'none',
       backgroundColor: 'transparent',
@@ -59,14 +58,14 @@ export default class Banner extends Component {
           style={{display: 'flex', justifyContent: 'center'}}
         >
           <StyledDiv>
-            <button
+            <a
               style={bannerStyle}
               onMouseEnter={this.toggleHover}
               onMouseLeave={this.toggleHover}
               onClick={this.handleClick}
             >
               Noel Parisi
-            </button>
+            </a>
           </StyledDiv>
         </div>
       )

@@ -14,14 +14,18 @@ export default class About extends Component {
     })
   }
   render() {
+    let returnToHomeStyle = {
+      color: 'cyan',
+      textDecoration: 'none',
+      cursor: 'pointer',
+    }
+    this.state.exitHover ? (returnToHomeStyle.fontWeight = '100') : null
     return (
       <section className="avenir tc mt6-ns mt5">
         <article className="relative mw7 center">
           <div>
             <p
               style={{
-                // borderRadius: '40%',
-                // backgroundColor: 'black',
                 color: 'palevioletred',
                 marginLeft: '5%',
                 marginRight: '5%',
@@ -47,11 +51,7 @@ export default class About extends Component {
               <a
                 onMouseEnter={this.toggleExitHover}
                 onMouseLeave={this.toggleExitHover}
-                style={{
-                  color: 'cyan',
-                  textDecoration: 'none',
-                  cursor: 'pointer',
-                }}
+                style={returnToHomeStyle}
                 onClick={this.props.close}
               >
                 Thanks for reading!
