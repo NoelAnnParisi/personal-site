@@ -15,7 +15,7 @@ export default class Main extends React.Component {
             <Route exact path="/about" component={About} />
             <Route
               render={() => {
-                return <p>Not Found</p>
+                return <Home />
               }}
             />
           </Switch>

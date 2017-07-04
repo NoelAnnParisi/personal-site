@@ -15,23 +15,35 @@ export default class About extends Component {
   }
   render() {
     return (
-      <section className="avenir tc mt6 ">
+      <section className="avenir tc mt6-ns mt5">
         <article className="relative mw7 center">
           <div>
-            <p style={{color: 'palevioletred'}} className="f4 mv1">
-              I'm a mission-driven full stack developer who lives on coffee &
-              strives to create reliable, user-focused products. My tools of
-              choice include, but aren't limited to: Javascript/ES6, HTML5/CSS3,
-              React.js, Node.js, Express.js, Webpack and MySQL/NoSQL. I've
-              contrbuited to a variety of projects ranging from a React Native
-              mobile app to a website for a local start up. I've also flexed my
-              backend muscles on a project called GitLists. All of which can be
-              found by clicking the handy GitHub icon below. I constantly seek
-              to expand my knowledge & grow as a developer and person. Others
-              say my uplifting nature and ability to build rapport are my
-              greatest qualities. For me, there's nothing sweeter than working
-              together to reach a common goal...besides the occassional spoonful
-              of sunflower seed butter.{' '}
+            <p
+              style={{
+                // borderRadius: '40%',
+                // backgroundColor: 'black',
+                color: 'palevioletred',
+                marginLeft: '5%',
+                marginRight: '5%',
+              }}
+              className="tracked f4-ns f5 fw3 mv1-ns"
+            >
+              I'm a uniquely balanced human who approaches complex problems with
+              a critical eye and curious spirit. Coffee in hand, I strive to
+              build reliable, user-focused products. My unshakable vision of a
+              more inclusive society fuels the enthusiasm I have for
+              programming. My tool belt includes, but isn't limited to, all
+              things Javascript/ES6, HTML5/CSS3, React, Node, Express, Webpack,
+              MySQL/NoSQL, Git and project management. I've contributed to a
+              mixture of projects ranging from a React Native mobile app to a
+              website for a local start up. The handy GitHub icon below will
+              lead you to all of my work. Those I've collaborated with describe
+              me as reliable, empathetic and resolute. When not coding you can
+              spot me adventuring about, at a farmer's markets, or indulging my
+              feline in some one-on-one time. Personally, there's nothing more
+              gratifying than rallying together to transform a forward-focused
+              thought into code...besides the sporadic spoonful of sunflower
+              seed butter. Seriously, try it!{' '}
               <a
                 onMouseEnter={this.toggleExitHover}
                 onMouseLeave={this.toggleExitHover}
