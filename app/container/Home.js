@@ -14,18 +14,18 @@ const Home = () => {
             number: {
               value: 50,
               density: {
-                enable: false,
+                enable: true,
                 value_area: 946.9771699587272,
               },
             },
             color: {
-              value: '#ff80ab',
+              value: '#bc8f8f',
             },
             shape: {
               type: 'triangle',
               stroke: {
                 width: 1.5,
-                color: '#18ffff',
+                color: '#FFEEEE',
               },
               polygon: {
                 nb_sides: 3,
@@ -36,7 +36,7 @@ const Home = () => {
               random: false,
               anim: {
                 enable: true,
-                speed: 9.90734199007641,
+                speed: 0,
                 opacity_min: 0.19489853095232282,
                 sync: false,
               },
@@ -45,8 +45,8 @@ const Home = () => {
               value: 4,
               random: true,
               anim: {
-                enable: true,
-                speed: 12,
+                enable: false,
+                speed: 0,
                 size_min: 0.1,
                 sync: false,
               },
@@ -54,7 +54,7 @@ const Home = () => {
             line_linked: {
               enable: true,
               distance: 160,
-              color: '#ff80ab',
+              color: '#bc8f8f',
               opacity: 0.8,
               width: 1.5,
             },

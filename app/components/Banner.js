@@ -9,22 +9,22 @@ const StyledDiv = styled.div`
   text-align: center;
   font-size: 3.3em;
   z-index: 5;
+  &:hover {
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: 0 0 7px #d3959b;
+    transform: scale(1.1);
+  }
 `
 export default class Banner extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      hover: false,
       showAbout: false,
     }
-    this.toggleHover = this.toggleHover.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
-  toggleHover() {
-    this.setState({
-      hover: !this.state.hover,
-    })
-  }
+
   handleClick(e) {
     e.preventDefault()
     this.setState({
@@ -34,17 +34,10 @@ export default class Banner extends Component {
   }
   render() {
     let bannerStyle = {
-      color: 'palevioletred',
+      color: '#D3959B',
       textDecoration: 'none',
       backgroundColor: 'transparent',
     }
-    this.state.hover
-      ? (bannerStyle = {
-          color: 'cyan',
-          textDecoration: 'none',
-          cursor: 'pointer',
-        })
-      : null
     if (this.state.showAbout) {
       return <About close={this.handleClick} />
     } else {
