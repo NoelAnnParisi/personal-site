@@ -1,4 +1,10 @@
 import React, {Component} from 'react'
+import styled from 'styled-components'
+
+const StyledText = styled.p`
+  font-family: 'Raleway', sans-serif;
+  color: white;
+`
 
 export default class About extends Component {
   constructor(props) {
@@ -21,17 +27,10 @@ export default class About extends Component {
     }
     this.state.exitHover ? (returnToHomeStyle.fontWeight = '100') : null
     return (
-      <section className="avenir tc mt6-ns mt5">
+      <section className="tc mt6-ns mt5">
         <article className="relative mw7 center">
           <div>
-            <p
-              style={{
-                color: 'palevioletred',
-                marginLeft: '5%',
-                marginRight: '5%',
-              }}
-              className="tracked f4-ns f5 fw3 mv1-ns"
-            >
+            <StyledText className="tracked f4-ns f5 fw3 mv1-ns ml0-l ml4 mr0-l mr4">
               I'm a uniquely balanced human who approaches complex problems with
               a critical eye and curious spirit. Coffee in hand, I strive to
               build reliable, user-focused products. My unshakable vision of a
@@ -56,7 +55,7 @@ export default class About extends Component {
               >
                 Thanks for reading!
               </a>
-            </p>
+            </StyledText>
           </div>
         </article>
       </section>

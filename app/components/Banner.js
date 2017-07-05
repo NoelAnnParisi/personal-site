@@ -5,8 +5,9 @@ import {Link} from 'react-router-dom'
 import About from './About'
 
 const StyledDiv = styled.div`
+  font-family: 'Lobster', cursive;
   text-align: center;
-  font-size: 2.8em;
+  font-size: 3.3em;
   z-index: 5;
 `
 export default class Banner extends Component {
@@ -34,17 +35,12 @@ export default class Banner extends Component {
   render() {
     let bannerStyle = {
       color: 'palevioletred',
-      fontWeight: 200,
       textDecoration: 'none',
-      border: 'none',
       backgroundColor: 'transparent',
     }
     this.state.hover
       ? (bannerStyle = {
           color: 'cyan',
-          fontWeight: 300,
-          border: 'none',
-          backgroundColor: 'transparent',
           textDecoration: 'none',
           cursor: 'pointer',
         })
@@ -54,7 +50,7 @@ export default class Banner extends Component {
     } else {
       return (
         <div
-          className="avenir tracked-mega head mt6 mt7-ns"
+          className="tracked-mega head mt6 mt7-ns"
           style={{display: 'flex', justifyContent: 'center'}}
         >
           <StyledDiv>
@@ -64,7 +60,7 @@ export default class Banner extends Component {
               onMouseLeave={this.toggleHover}
               onClick={this.handleClick}
             >
-              Noel Parisi
+              {'<' + 'NoelParisi' + ' />'}
             </a>
           </StyledDiv>
         </div>
