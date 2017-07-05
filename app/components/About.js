@@ -2,16 +2,16 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 
 const StyledText = styled.p`
-  text-align: justify;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
-  color: #d3959b;
+  color: #bc8f8f;
 `
 const StyledLink = styled.a`
-  text-decoration: underline;
   &:hover {
     cursor: pointer;
-    color: transparent;
-    text-shadow: 0 0 5px #d3959b;
+    text-decoration: underline;
+    transition: 1.5s;
+    transform: scale(1.2);
   }
 `
 
@@ -33,13 +33,13 @@ export default class About extends Component {
       <section className="mt5">
         <article className="relative mw7 center">
           <div>
-            <StyledText className="tracked lh-copy f4-ns f5 fw3 mv1-ns ml0-l ml4 mr0-l mr4">
+            <StyledText className="tracked lh-copy f4-ns f5 fw9 mv1-ns ml0-l ml4 mr0-l mr4">
               I'm a uniquely balanced human who approaches complex problems with
               a critical eye and curious spirit. Coffee in hand, I strive to
-              build reliable, user-focused products. My unshakable vision for a
-              more inclusive society fuels the enthusiasm I have for
-              programming. My tool belt includes, but isn't limited to, all
-              things Javascript/ES6, HTML5/CSS3, React, Node, Express, Webpack,
+              build reliable, user-focused products. My enthusiasm for
+              programming is fueled by an unshakable vision of a more inclusive
+              society. My tool belt includes, but isn't limited to, all things
+              Javascript/ES6, HTML5/CSS3, React, Node, Express, Webpack,
               MySQL/NoSQL, Git and project management. I've contributed to a
               variety of projects ranging from a website for a local start up to
               a React Native mobile app. The GitHub icon below will lead you to
@@ -55,7 +55,7 @@ export default class About extends Component {
                 onMouseLeave={this.toggleExitHover}
                 onClick={this.props.close}
               >
-                Thanks for reading!
+                {'<' + 'ContinueClickingOnBackground' + ' />'}
               </StyledLink>
             </StyledText>
           </div>

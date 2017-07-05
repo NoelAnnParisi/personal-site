@@ -8,12 +8,12 @@ const StyledDiv = styled.div`
   font-family: 'Lobster', cursive;
   text-align: center;
   font-size: 3.3em;
+  font-weight: 600;
   z-index: 5;
   &:hover {
     cursor: pointer;
-    font-weight: 600;
-    text-shadow: 0 0 7px #d3959b;
-    transform: scale(1.1);
+    transition: 1.2s;
+    transform: scale(1.2);
   }
 `
 export default class Banner extends Component {
@@ -34,7 +34,7 @@ export default class Banner extends Component {
   }
   render() {
     let bannerStyle = {
-      color: '#D3959B',
+      color: '#bc8f8f',
       textDecoration: 'none',
       backgroundColor: 'transparent',
     }

@@ -29,20 +29,29 @@ export default class Icons extends Component {
     })
   }
   render() {
-    let gitHubcolor = '#D3959B'
+    let gitHubcolor = '#bc8f8f'
     let gitHubStyle
-    let linkedInColor = '#D3959B'
+    let linkedInColor = '#bc8f8f'
     let linkedinStyle
-    let twitterColor = '#D3959B'
+    let twitterColor = '#bc8f8f'
     let twitterStyle
     this.state.hoverGithub
-      ? (gitHubStyle = {transform: 'scale(1.3)'})
+      ? (gitHubStyle = {
+          transition: '1.1s',
+          transform: 'scale(1.3)',
+        })
       : gitHubcolor && gitHubStyle
     this.state.hoverTwitter
-      ? (twitterStyle = {transform: 'scale(1.3)'})
+      ? (twitterStyle = {
+          transition: '1.1s',
+          transform: 'scale(1.3)',
+        })
       : twitterStyle && twitterColor
     this.state.hoverLinkedIn
-      ? (linkedinStyle = {transform: 'scale(1.3)'})
+      ? (linkedinStyle = {
+          transition: '1.1s',
+          transform: 'scale(1.3)',
+        })
       : linkedInColor && linkedinStyle
     return (
       <div style={{zIndex: 5}} className="mt2 pv4 ph3 ph6-ns tc">
