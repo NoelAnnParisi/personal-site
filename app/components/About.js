@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledText = styled.p`
   font-family: 'Raleway', sans-serif;
-  color: white;
+  color: palevioletred;
 `
 
 export default class About extends Component {
