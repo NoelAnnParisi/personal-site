@@ -15,13 +15,14 @@ const FirstDiv = styled.div`
 const StyledDiv = styled.div`
   font-family: 'Lobster', cursive;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.1em;
   font-weight: 600;
   z-index: 5;
+  margin-bottom: 2.5%;
   &:hover {
     cursor: pointer;
     transition: 0.4s;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `
 export default class Banner extends Component {

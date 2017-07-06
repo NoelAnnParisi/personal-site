@@ -16,6 +16,10 @@ const StyledText = styled.p`
   text-align: center;
   font-family: 'Raleway', sans-serif;
   color: #bc8f8f;
+  background: linear-gradient(
+    rgba(255, 238, 238, 0.5),
+    rgba(221, 239, 187, 0.5)
+  );
 `
 
 const StyledDiv = styled.div`
@@ -33,7 +37,7 @@ const StyledLink = styled.a`
     cursor: pointer;
     text-decoration: underline;
     transition: 0.45s;
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
 `
 
@@ -81,7 +85,7 @@ export default class About extends Component {
             onMouseLeave={this.toggleExitHover}
             onClick={this.props.close}
           >
-            {'<' + 'ContinueClickingOnBackground' + ' />'}
+            <i className="fa fa-arrow-left" style={{size: '30px'}} />
           </StyledLink>
         </StyledDiv>
         <Icons />
