@@ -9,10 +9,9 @@ export default class Main extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div style={{minHeight: '100vh'}}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
             <Route
               render={() => {
                 return <Home />

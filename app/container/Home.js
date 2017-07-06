@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import P from 'react-particles-js'
 import Banner from '../components/Banner'
-import Icons from '../components/Icons'
 
 const Home = () => {
   return (
@@ -123,7 +122,6 @@ const Home = () => {
         }}
       />
       <Banner />
-      <Icons />
     </div>
   )
 }

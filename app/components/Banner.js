@@ -3,7 +3,15 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 import About from './About'
+import Icons from './Icons'
 
+const FirstDiv = styled.div`
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`
 const StyledDiv = styled.div`
   font-family: 'Lobster', cursive;
   text-align: center;
@@ -12,7 +20,7 @@ const StyledDiv = styled.div`
   z-index: 5;
   &:hover {
     cursor: pointer;
-    transition: 1.2s;
+    transition: 0.4s;
     transform: scale(1.2);
   }
 `
@@ -42,10 +50,7 @@ export default class Banner extends Component {
       return <About close={this.handleClick} />
     } else {
       return (
-        <div
-          className="tracked-mega head mt6 mt7-ns"
-          style={{display: 'flex', justifyContent: 'center'}}
-        >
+        <FirstDiv className="tracked-mega head">
           <StyledDiv>
             <a
               style={bannerStyle}
@@ -53,10 +58,11 @@ export default class Banner extends Component {
               onMouseLeave={this.toggleHover}
               onClick={this.handleClick}
             >
-              {'<' + 'NoelParisi' + ' />'}
+              {'<' + 'AboutNoel' + ' />'}
             </a>
           </StyledDiv>
-        </div>
+          <Icons />
+        </FirstDiv>
       )
     }
   }

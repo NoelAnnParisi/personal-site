@@ -37,24 +37,24 @@ export default class Icons extends Component {
     let twitterStyle
     this.state.hoverGithub
       ? (gitHubStyle = {
-          transition: '1.1s',
+          transition: '0.37s',
           transform: 'scale(1.3)',
         })
       : gitHubcolor && gitHubStyle
     this.state.hoverTwitter
       ? (twitterStyle = {
-          transition: '1.1s',
+          transition: '0.37s',
           transform: 'scale(1.3)',
         })
       : twitterStyle && twitterColor
     this.state.hoverLinkedIn
       ? (linkedinStyle = {
-          transition: '1.1s',
+          transition: '0.37s',
           transform: 'scale(1.3)',
         })
       : linkedInColor && linkedinStyle
     return (
-      <div style={{zIndex: 5}} className="mt2 pv4 ph3 ph6-ns tc">
+      <div style={{zIndex: 5}} className="ph3 tc mt4 mb0-ns mb2">
         <a
           style={gitHubStyle}
           onMouseEnter={this.toggleHoverGithub}
