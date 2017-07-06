@@ -58,7 +58,7 @@ export default class Banner extends Component {
               onMouseLeave={this.toggleHover}
               onClick={this.handleClick}
             >
-              {'<' + 'NoelParisi onClick={showBio}' + ' />'}
+              {'<' + 'NoelParisi onClick={this.showBio}' + ' />'}
             </a>
           </StyledDiv>
           <Icons />
