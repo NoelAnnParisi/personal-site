@@ -59,7 +59,7 @@ const Home = () => {
             },
             move: {
               enable: true,
-              speed: 0.5,
+              speed: 0.6,
               direction: 'top',
               random: false,
               straight: false,
@@ -77,7 +77,7 @@ const Home = () => {
             events: {
               onhover: {
                 enable: true,
-                mode: 'grab',
+                mode: 'repulse',
               },
               onclick: {
                 enable: true,
@@ -100,7 +100,7 @@ const Home = () => {
                 speed: 3,
               },
               repulse: {
-                distance: 400,
+                distance: 100,
                 duration: 0.4,
               },
               push: {
