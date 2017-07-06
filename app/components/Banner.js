@@ -15,7 +15,7 @@ const FirstDiv = styled.div`
 const StyledDiv = styled.div`
   font-family: 'Lobster', cursive;
   text-align: center;
-  font-size: 3.3em;
+  font-size: 2.5em;
   font-weight: 600;
   z-index: 5;
   &:hover {
@@ -58,7 +58,7 @@ export default class Banner extends Component {
               onMouseLeave={this.toggleHover}
               onClick={this.handleClick}
             >
-              {'<' + 'AboutNoel' + ' />'}
+              {'<' + 'NoelParisi onClick={showBio}' + ' />'}
             </a>
           </StyledDiv>
           <Icons />
