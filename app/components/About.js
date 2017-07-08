@@ -11,6 +11,12 @@ const StyledSection = styled.section`
   align-self: center;
   position: relative;
 `
+const GradientDiv = styled.div`
+  background: linear-gradient(
+    rgba(255, 238, 238, 0.6),
+    rgba(221, 239, 187, 0.6)
+  );
+`
 
 const StyledText = styled.p`
   text-align: center;
@@ -19,23 +25,23 @@ const StyledText = styled.p`
 `
 const StyledA = styled.a`
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
   color: #bc8f8f;
-  display: ${props => (props.showElipses === false ? 'none' : null)}
+  display: ${props => (props.showElipses === false ? 'none' : null)};
   &:hover {
     cursor: pointer;
+    transition: 0.25s;
+    transform: scale(1.1);
   }
 `
-
 const ReadMore = styled.div`
   display: ${props => (props.readMore === false ? 'none' : null)};
 `
 const ReadMoreP = StyledText.extend``
 
 const StyledDiv = styled.div`
-  background: linear-gradient(
-    rgba(255, 238, 238, 0.5),
-    rgba(221, 239, 187, 0.5)
-  );
   display: flex;
   align-self: center;
   justify-content: center;
@@ -82,7 +88,7 @@ export default class About extends Component {
     return (
       <StyledSection>
         <article className="center mw7">
-          <div>
+          <GradientDiv>
             <StyledText className="tracked lh-copy f4-ns f5 fw9 mv1-ns ml0-l ml4 mr0-l mr4">
               I'm a uniquely balanced human who approaches complex problems with
               a critical eye and curious spirit. Coffee in hand, I strive to
@@ -91,13 +97,13 @@ export default class About extends Component {
               society. My tool belt includes, but isn't limited to, all things
               Javascript/ES6, HTML5/CSS3, React, Node, Express, Webpack,
               MySQL/NoSQL, Git and project management. I've contributed to a
-              variety of projects
+              variety of projects,
             </StyledText>
             <StyledA
               showElipses={this.state.showElipses}
               onClick={this.toggleShowMore}
             >
-              ...read on...
+              ...continue reading...
             </StyledA>
             <ReadMore readMore={this.state.showMore}>
               <ReadMoreP className="tracked lh-copy f4-ns f5 fw9 mv1-ns ml0-l ml4 mr0-l mr4">
@@ -112,7 +118,7 @@ export default class About extends Component {
                 butter. Seriously, try it!{' '}
               </ReadMoreP>
             </ReadMore>
-          </div>
+          </GradientDiv>
         </article>
         <StyledDiv className="mt2 mt3-ns f4-ns f5 fw9">
           <StyledLink
