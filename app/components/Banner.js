@@ -25,6 +25,7 @@ const StyledDiv = styled.div`
     transform: scale(1.1);
   }
 `
+
 export default class Banner extends Component {
   constructor(props) {
     super(props)
@@ -43,7 +44,7 @@ export default class Banner extends Component {
   }
   render() {
     let bannerStyle = {
-      color: '#bc8f8f',
+      color: 'rgba(188, 143, 143, 0.5)',
       textDecoration: 'none',
       backgroundColor: 'transparent',
     }
@@ -59,7 +60,15 @@ export default class Banner extends Component {
               onMouseLeave={this.toggleHover}
               onClick={this.handleClick}
             >
-              {'<' + 'NoelParisi onClick={this.showBio}' + ' />'}
+              {'<'}
+              <span style={{color: 'rgba(188, 143, 143, 0.8)'}}>
+                {'NoelParisi '}
+              </span>
+              {'onClick={this.'}
+              <span style={{color: 'rgba(188, 143, 143, 0.8)'}}>
+                {'showBio}'}
+              </span>
+              {' />'}
             </a>
           </StyledDiv>
           <Icons />
