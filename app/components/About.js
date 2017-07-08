@@ -16,13 +16,26 @@ const StyledText = styled.p`
   text-align: center;
   font-family: 'Raleway', sans-serif;
   color: #bc8f8f;
+`
+const StyledA = styled.a`
+  font-family: 'Raleway', sans-serif;
+  color: #bc8f8f;
+  display: ${props => (props.showElipses === false ? 'none' : null)}
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+const ReadMore = styled.div`
+  display: ${props => (props.readMore === false ? 'none' : null)};
+`
+const ReadMoreP = StyledText.extend``
+
+const StyledDiv = styled.div`
   background: linear-gradient(
     rgba(255, 238, 238, 0.5),
     rgba(221, 239, 187, 0.5)
   );
-`
-
-const StyledDiv = styled.div`
   display: flex;
   align-self: center;
   justify-content: center;
@@ -46,14 +59,25 @@ export default class About extends Component {
     super(props)
     this.state = {
       exitHover: false,
+      showMore: false,
+      showElipses: true,
     }
     this.toggleExitHover = this.toggleExitHover.bind(this)
+    this.toggleShowMore = this.toggleShowMore.bind(this)
   }
   toggleExitHover() {
     this.setState({
       exitHover: !this.state.exitHover,
     })
   }
+
+  toggleShowMore() {
+    this.setState({
+      showMore: true,
+      showElipses: false,
+    })
+  }
+
   render() {
     return (
       <StyledSection>
@@ -67,16 +91,27 @@ export default class About extends Component {
               society. My tool belt includes, but isn't limited to, all things
               Javascript/ES6, HTML5/CSS3, React, Node, Express, Webpack,
               MySQL/NoSQL, Git and project management. I've contributed to a
-              variety of projects ranging from a website for a local start up to
-              a React Native mobile app. The GitHub icon will lead you to all of
-              my work. Those I've collaborated with describe me as reliable,
-              empathetic and resolute. When not coding I'm adventuring about,
-              experimenting in the kitchen, or indulging my feline in some
-              one-on-one time. Personally, there's nothing more gratifying than
-              rallying together to transform a forward-focused thought into
-              code...besides the sporadic spoonful of sunflower seed butter.
-              Seriously, try it!{' '}
+              variety of projects
             </StyledText>
+            <StyledA
+              showElipses={this.state.showElipses}
+              onClick={this.toggleShowMore}
+            >
+              ...read on...
+            </StyledA>
+            <ReadMore readMore={this.state.showMore}>
+              <ReadMoreP className="tracked lh-copy f4-ns f5 fw9 mv1-ns ml0-l ml4 mr0-l mr4">
+                ranging from a website for a local start up to a React Native
+                mobile app. The GitHub icon will lead you to all of my work.
+                Those I've collaborated with describe me as reliable, empathetic
+                and resolute. When not coding I'm adventuring about,
+                experimenting in the kitchen, or indulging my feline in some
+                one-on-one time. Personally, there's nothing more gratifying
+                than rallying together to transform a forward-focused thought
+                into code...besides the sporadic spoonful of sunflower seed
+                butter. Seriously, try it!{' '}
+              </ReadMoreP>
+            </ReadMore>
           </div>
         </article>
         <StyledDiv className="mt2 mt3-ns f4-ns f5 fw9">
