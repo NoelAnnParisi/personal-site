@@ -36,9 +36,11 @@ const StyledA = styled.a`
     transform: scale(1.1);
   }
 `
+
 const ReadMore = styled.div`
-  display: ${props => (props.readMore === false ? 'none' : null)};
+  display: ${props => (props.showMore === false ? 'none' : null)};
 `
+
 const ReadMoreP = StyledText.extend``
 
 const StyledDiv = styled.div`
@@ -105,7 +107,7 @@ export default class About extends Component {
             >
               ...continue reading...
             </StyledA>
-            <ReadMore readMore={this.state.showMore}>
+            <ReadMore showMore={this.state.showMore}>
               <ReadMoreP className="tracked lh-copy f4-ns f5 fw9 mv1-ns ml0-l ml4 mr0-l mr4">
                 ranging from a website for a local start up to a React Native
                 mobile app. The GitHub icon will lead you to all of my work.
