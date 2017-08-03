@@ -150,9 +150,9 @@ export default class Icons extends Component {
             <svg
               fill={twitterColor}
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 115 125"
+              viewBox="5 11 100 125"
               width="53"
-              height="58"
+              height="65"
               fillRule="evenodd"
               clipRule="evenodd"
               strokeLinejoin="round"
