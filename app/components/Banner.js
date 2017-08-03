@@ -15,7 +15,7 @@ const FirstDiv = styled.div`
 const StyledDiv = styled.div`
   font-family: 'Lobster', cursive;
   text-align: center;
-  font-size: 2.1em;
+  font-size: 2.5em;
   font-weight: 600;
   z-index: 5;
   margin-bottom: 2.5%;
@@ -62,16 +62,12 @@ export default class Banner extends Component {
             >
               {'<'}
               <span style={{color: 'rgba(188, 143, 143, 0.8)'}}>
-                {'NoelParisi '}
-              </span>
-              {'onClick={this.'}
-              <span style={{color: 'rgba(188, 143, 143, 0.8)'}}>
-                {'showBio}'}
+                {'NoelAnnParisi '}
               </span>
               {' />'}
             </a>
           </StyledDiv>
-          <Icons />
+          <Icons handleClick ={this.handleClick}/>
         </FirstDiv>
       )
     }
