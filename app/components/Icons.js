@@ -11,7 +11,7 @@ export default class Icons extends Component {
     }
     this.toggleHoverGithub = this.toggleHoverGithub.bind(this)
     this.toggleHoverLinkedIn = this.toggleHoverLinkedIn.bind(this)
-    this.toggleHoverTwitter = this.toggleHoverTwitter.bind(this)
+    this.toggleHoverAbout = this.toggleHoverAbout.bind(this)
   }
   toggleHoverGithub() {
     this.setState({
@@ -24,7 +24,7 @@ export default class Icons extends Component {
       hoverLinkedIn: !this.state.hoverLinkedIn,
     })
   }
-  toggleHoverTwitter() {
+  toggleHoverAbout() {
     this.setState({
       hoverTwitter: !this.state.hoverTwitter,
     })
@@ -34,8 +34,8 @@ export default class Icons extends Component {
     let gitHubStyle
     let linkedInColor = '#bc8f8f'
     let linkedinStyle
-    let twitterColor = '#bc8f8f'
-    let twitterStyle
+    let aboutColor = '#bc8f8f'
+    let aboutStyle
     this.state.hoverGithub
       ? (gitHubStyle = {
           transition: '0.37s',
@@ -43,11 +43,11 @@ export default class Icons extends Component {
         })
       : gitHubcolor && gitHubStyle
     this.state.hoverTwitter
-      ? (twitterStyle = {
+      ? (aboutStyle = {
           transition: '0.37s',
           transform: 'scale(1.3)',
         })
-      : twitterStyle && twitterColor
+      : aboutStyle && aboutColor
     this.state.hoverLinkedIn
       ? (linkedinStyle = {
           transition: '0.37s',
@@ -140,15 +140,15 @@ export default class Icons extends Component {
           freez={true}
         >
           <a
-            style={twitterStyle}
+            style={aboutStyle}
             onClick={(e)=>{this.props.handleClick(e)}}
-            onMouseEnter={this.toggleHoverTwitter}
-            onMouseLeave={this.toggleHoverTwitter}
+            onMouseEnter={this.toggleHoverAbout}
+            onMouseLeave={this.toggleHoverAbout}
             className="pointer about relative link hover-silver near-black dib h2 w2"
             target="_blank"
           >
             <svg
-              fill={twitterColor}
+              fill={aboutColor}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="7 11 100 125"
               width="55"
